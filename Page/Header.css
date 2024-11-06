@@ -1,0 +1,168 @@
+:root{
+    --myBlue: #1e2e3d;
+    --boxShadow: 5px 5px rgb(199, 192, 192, 0.1);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    transition: all .5s linear;
+}
+
+.mobile-narvbar{
+    display: none;
+}
+
+body{
+    width: 100%;
+    height: 100px;
+    background-color: aliceblue;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+header{
+    width: 100%;
+    height: 100px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    background-color: aliceblue;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    border: dashed;
+}
+
+header .logo{
+    width: 10%;
+    height: 60px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+header .logo img{
+    width: 55px;
+    height: 60px;
+    border-radius: 50%;
+}
+header .logo #menu-btn{
+    color: var(--myBlue);
+    font-size: 30px;
+    display: none;
+}
+
+header .desktopNav{
+    width: 60%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    border: dashed;
+}
+
+header .desktopNav .myNav {
+ width: 60%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+header  .myNav li {
+    list-style: none;
+}
+header .myNav li a {
+    color: var(--myBlue);
+    font-size: 17px;
+    text-decoration: none;
+    padding: 5px;
+    position: relative;
+}
+header  .myNav li a::after{
+    content: "";
+    width: 0;
+    height: 3px;
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    background-color: var(--myBlue);
+    transition: all .3s;
+
+}
+header .myNav li a:hover::after{
+    width: 100%;
+}
+
+header .desktopNav .myNav li a.current{
+    color: white;
+    background-color: var(--myBlue);
+}
+header  .account{
+    width: 20%;
+    height: 100px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+header  .account a{
+    background-color: transparent;
+    color: var(--myBlue);
+    font-size: 17px;
+    text-decoration: none;
+    padding: 7px;
+    border-radius: 3px;
+    border: solid 1px var(--myBlue);
+}
+header  .account a:hover{
+    color: white;
+    background-color: var(--myBlue);
+}
+.recent-post{
+    width: 80vw;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 50px;
+    border: dashed;
+    margin-top: 100px;
+}
+.recent-post .post-wrapper{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    border: dashed;
+}
+.recent-post .post-wrapper .post{
+    width: 25%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    border: dashed;
+}
+.recent-post .post-wrapper .post img{
+    width: 100%;
+    height: 150px;
+}
+ .post-wrapper .post .author{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    border: dashed;
+ }
